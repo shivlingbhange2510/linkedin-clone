@@ -1,23 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-
+import { LoginButton} from './Auth0/LoginButton';
+import { LogoutButton} from './Auth0/LogoutButton';
+import {Profile} from './Auth0/Profile';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <LoginButton/>
+    {/* <LogoutButton/> */}
+    {/* <Profile/> */}
     </div>
   );
 }
