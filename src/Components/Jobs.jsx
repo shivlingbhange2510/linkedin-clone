@@ -41,7 +41,7 @@ export default function Jobs() {
                     </div>
                     <div className="d2">
                         <div className="img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfIrn5orx6KdLUiIvZ3IUkZTMdIyes-D6sMA&usqp=CAU" alt="User Profile" />
+                            <img src="/images/profileimage.jpeg" alt="User Profile" />
                         </div>
                         <div className="tryprem">
                             <p>Try Premium to see jobs where you would be a top applicant</p>
@@ -124,7 +124,7 @@ export default function Jobs() {
                         </div>
                         <div className="b2">
                             <p>I want to improve my resume</p>
-                            <img src="https://www.linkedin.com/dms/C4D0DAQFdDVwn9b17iA/learning-public-crop_60_100/0/1568251157263?m=AQJLVlOrXz1D_wAAAX_zD3ZmJTF0LSllRdKnxmvHa5CqcuRXBUPpi8lNGQ&e=1649136751&v=beta&t=0ePQKrAbVd947GMMVhmn2N4NpG1jl0rQdpWD9qarcgI" alt="img" />
+                            <img src="/images/jobspage.gif" alt="img" />
                         </div>
                         <div className="b3">
                             <p>Explore our curated guide of expert-led courses, such as how to improve your resume and grow your network, to help you land your next opportunity.</p>

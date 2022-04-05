@@ -1,20 +1,15 @@
 import React, {useState} from 'react'
 
 export default function Body() {
-    const [num,setNum] = useState(false);
+    const [num,setNum] = useState(true);
     function opennav() {
         var show = document.querySelector(".showmoretext")
-        var b = document.querySelector("#box111")
-        setNum(!num)
         if(num) {
-            console.log(num)
-            b.style.display = "block"
-            show.innerHTML = `<p>Show less <i class="fa-solid fa-chevron-up"></i></p>`
-        } else {
-            console.log(num)
-            b.style.display = "none"
             setNum(!num)
             show.innerHTML = `<p>Show more <i class="fa-solid fa-chevron-down"></i></p>`
+        } else {
+            setNum(!num)
+            show.innerHTML = `<p>Show less <i class="fa-solid fa-chevron-up"></i></p>`
         }
     }
   return (
@@ -24,15 +19,15 @@ export default function Body() {
                 <div className="b1">
                     <div className="box1">
                         <div className="box11">
-                            <img src="https://www.netsolutions.com/insights/wp-content/uploads/2021/12/11-most-popular-programming-languages.webp" alt="User Background" />
+                            <img src="/images/profilebg.webp" alt="User Background" />
                         </div>
                         <div className="box12">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfIrn5orx6KdLUiIvZ3IUkZTMdIyes-D6sMA&usqp=CAU" alt="User Image" />
+                            <img src="/images/profileimage.jpeg" alt="User Image" />
                             <p><b>User Name</b></p>
                             <p className="small">Aspiring Full Stack Web Development at Masai School</p>
                         </div>
                     </div>
-                    {num && (<div className="box111" id="box111">
+                    {(num || window.innerWidth > "853") && (<div className="box111" id="box111">
                         <hr />
                         <div className="p11 hover">
                             <div className="p1 mu-4">
@@ -57,14 +52,14 @@ export default function Body() {
                     </div>)}
                 </div>
             </div>
-            <div className="showmorebtn" onclick={opennav}>
-                <p className="showmoretext">Show more <i className="fa-solid fa-chevron-down"></i></p>
+            <div className="showmorebtn" onClick={opennav}>
+                <p className="showmoretext">Show less <i className="fa-solid fa-chevron-up"></i></p>
             </div>
             <div className="right">
                 <div className="up">
                     <div className="d1">
                         <div className="d2">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfIrn5orx6KdLUiIvZ3IUkZTMdIyes-D6sMA&usqp=CAU" alt="User Image" />
+                            <img src="/images/profileimage.jpeg" alt="User Image" />
                             <p>Start a post</p>
                         </div>
                         <div className="d3">
@@ -87,7 +82,46 @@ export default function Body() {
                         </div>
                     </div>
                     <div className="d4">
-                        
+                        <div className="post">
+                            <div className="p1">
+                                <div className="postdata">
+                                    <div className="left">
+                                        <div className="l1">
+                                            <img src="/images/profileimage.jpeg" alt="User Profile" />
+                                        </div>
+                                        <div className="l2">
+                                            <p>Masai School ⭐</p>
+                                            <p className='small'>Coding School</p>
+                                            <p className='small'>12h ago</p>
+                                        </div>
+                                    </div>
+                                    <p className="righttext">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="p2">
+                                <img src="" alt="Post Image" />
+                            </div>
+                            <div className="p3">
+                                <div className="reactions">
+                                    <p className='small link'>
+                                    <i class="fa-solid fa-heart i1"></i>
+                                    <i class="fa-solid fa-lightbulb i2"></i>
+                                    <i class="fa-solid fa-hands-clapping i3"></i>
+                                    <span> 12,223 Likes</span> 
+                                    </p>
+                                    <p className='small'>12 Comments . 15 Shares</p>
+                                </div>
+                                <hr />
+                                <div className="btns">
+                                    <button className='likebtn'><i class="fa-solid fa-thumbs-up"></i> Like</button>
+                                    <button className='commentbtn'><i class="fa-solid fa-comment-dots"></i> Comment</button>
+                                    <button className='sharebtn'><i class="fa-solid fa-share"></i> Share</button>
+                                    <button className='sendbtn'><i class="fa-solid fa-paper-plane"></i> Send</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="down">
