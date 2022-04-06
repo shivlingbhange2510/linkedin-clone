@@ -1,0 +1,2 @@
+export const GET_ALL_POST='GET_ALL_POST';
+export const UPDATE_GET_ALL_POST="UPDATE_GET_ALL_POST";
