@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-
+import {Posts} from './Posts'
 export default function Body() {
     const [num,setNum] = useState(true);
     function opennav() {
@@ -11,6 +11,9 @@ export default function Body() {
             setNum(!num)
             show.innerHTML = `<p>Show less <i class="fa-solid fa-chevron-up"></i></p>`
         }
+    }
+    const handleLike=()=>{
+        
     }
   return (
     <section className="s2">
@@ -82,6 +85,8 @@ export default function Body() {
                         </div>
                     </div>
                     <div className="d4">
+                        <Posts/>
+                        <br/>
                         <div className="post">
                             <div className="p1">
                                 <div className="postdata">
@@ -91,8 +96,8 @@ export default function Body() {
                                         </div>
                                         <div className="l2">
                                             <p>Masai School ⭐</p>
-                                            <p className='small'>Coding School</p>
-                                            <p className='small'>12h ago</p>
+                                            <p className='small'>xyz School</p>
+                                            <p className='small'>1h ago</p>
                                         </div>
                                     </div>
                                     <p className="righttext">
@@ -109,9 +114,9 @@ export default function Body() {
                                     <i class="fa-solid fa-heart i1"></i>
                                     <i class="fa-solid fa-lightbulb i2"></i>
                                     <i class="fa-solid fa-hands-clapping i3"></i>
-                                    <span> 12,223 Likes</span> 
+                                    <span> 500 Likes</span> 
                                     </p>
-                                    <p className='small'>12 Comments . 15 Shares</p>
+                                    <p className='small'>162 Comments . 166 Shares</p>
                                 </div>
                                 <hr />
                                 <div className="btns">

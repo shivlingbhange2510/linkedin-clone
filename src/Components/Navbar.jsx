@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom"
-
+import { Todo } from './Todo/Todo'
 export default function Navbar() {
     return (
         <div>
@@ -8,6 +8,7 @@ export default function Navbar() {
                 <nav>
                     <div className="nav">
                         <div className="left">
+                            {/* <Todo/> */}
                             <div className="logo">
                                 <Link to="/">
                                     <i className="fa-brands fa-linkedin"></i>

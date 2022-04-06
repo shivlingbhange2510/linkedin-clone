@@ -10,7 +10,7 @@
   ],
   "allpost": [
     {
-      "id": 5,
+      "id": 10,
       "userCreatedPostName": "shivling bhange",
       "totalLike": 0,
       "postDescription": "hi are you looking for a job we are hiring for xyz position",
@@ -18,8 +18,7 @@
       "postCreatedTime": "05-04-2022",
       "totalComment": 23,
       "shares": 30,
-      "postImage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFwKsMeeKZc_SwbdKuI_8P4PHSdPbCK6NNtNUjXpyTmOZKXotghNDPhWB0s_bZVZQvGIM&usqp=CAU",
-      "avc": "https://images.newindianexpress.com/uploads/user/imagelibrary/2021/1/25/w900X450/tcs.jpg?w=400&dpr=2.6"
+      "postImage": "https://images.newindianexpress.com/uploads/user/imagelibrary/2021/1/25/w900X450/tcs.jpg?w=400&dpr=2.6"
     },
     {
       "id": 20,
@@ -91,6 +90,16 @@
       "postDescription": "hiring for java developer",
       "nameOfOrganization": "masai school",
       "postCreatedTime": "2022-04-06T14:52:40.647Z",
+      "share": 0,
+      "totalComment": 0
+    },
+    {
+      "id": "a5e23469-71fb-4dd5-b0d4-d27d203c79df",
+      "userCreatedPostName": "first post of days",
+      "totalLike": 0,
+      "postDescription": "hiring for java developer",
+      "nameOfOrganization": "masai school",
+      "postCreatedTime": "2022-04-06T14:52:40.665Z",
       "share": 0,
       "totalComment": 0
     }
