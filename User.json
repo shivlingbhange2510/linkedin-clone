@@ -11,86 +11,55 @@
   "allpost": [
     {
       "id": 5,
-      "userCreatedPostName": "shivling bhange",
-      "totalLike": 0,
+      "commentStatus": false,
+      "showCommentInput": false,
+      "commentMessage": [
+        {
+          "id": 90,
+          "userProfilePic": "",
+          "userName": "sanjana ",
+          "userPosition": "flutter developer at amazon",
+          "commentTime": "2022-05-05",
+          "commentDecription": "userCreatedPostName"
+        },
+        {
+          "id": 180,
+          "userProfilePic": "",
+          "userName": "Amol Asale",
+          "userPosition": "working at google",
+          "commentTime": "2022-05-05",
+          "commentDecription": "congratulaction bro..."
+        }
+      ],
+      "userCreatedPostName": "kane Wiiliamson",
+      "totalLike": 999,
       "postDescription": "hi are you looking for a job we are hiring for xyz position",
       "nameOfOrganization": "incipient infotech",
-      "postCreatedTime": "05-04-2022",
-      "totalComment": 23,
+      "postCreatedTime": "2022-05-05",
+      "totalComment": 999,
       "shares": 30,
-      "postImage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFwKsMeeKZc_SwbdKuI_8P4PHSdPbCK6NNtNUjXpyTmOZKXotghNDPhWB0s_bZVZQvGIM&usqp=CAU",
+      "postImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFwKsMeeKZc_SwbdKuI_8P4PHSdPbCK6NNtNUjXpyTmOZKXotghNDPhWB0s_bZVZQvGIM&usqp=CAU",
       "avc": "https://images.newindianexpress.com/uploads/user/imagelibrary/2021/1/25/w900X450/tcs.jpg?w=400&dpr=2.6"
     },
     {
-      "id": 20,
-      "userCreatedPostName": "Raj sharma1",
-      "totalLike": 250,
-      "postDescription": "hi are you looking for a job we are hiring for reactjs position",
-      "nameOfOrganization": "incipient",
-      "postCreatedTime": "04-04-2022",
-      "comment": 100,
-      "postImage": "https://imgur.com/a/tG8FzTD.jpg",
-      "shares": 100
-    },
-    {
-      "id": 230,
-      "userCreatedPostName": "Raj sharma1",
-      "totalLike": 250,
-      "postDescription": "hi are you looking for a job we are hiring for reactjs position",
-      "nameOfOrganization": "tcs",
-      "postCreatedTime": "04-04-2022",
-      "comment": 100,
-      "shares": 100
-    },
-    {
-      "id": "4db50130-bbda-49c2-837b-edc35b93c31a",
-      "userCreatedPostName": "shivling lastPost",
-      "totalLike": 0,
-      "postDescription": "test post",
-      "nameOfOrganization": "test organization",
-      "postCreatedTime": "2022-04-06T10:27:20.790Z",
-      "share": 0,
-      "totalComment": 0
-    },
-    {
-      "id": "8cddee6f-45d5-40e0-ac5a-81dcf709b70d",
+      "id": "e3cc4963-8a65-420c-bc27-6e1506ab1a62",
+      "commentStatus": false,
+      "showCommentInput": false,
+      "commentMessage": [
+        {
+          "id": "156dbe91-dbe6-45c2-9eae-7a8cf4e04efe",
+          "userProfilePic": "",
+          "userName": "shahjad ",
+          "userPosition": "flutter developer at amazon",
+          "commentTime": "2022-05-06",
+          "commentDecription": "own created for testing"
+        }
+      ],
       "userCreatedPostName": "first post of days",
       "totalLike": 0,
       "postDescription": "hiring for java developer",
       "nameOfOrganization": "masai school",
-      "postCreatedTime": "2022-04-06T12:45:51.301Z",
-      "share": 0,
-      "postImage": "https://prnt.sc/F2PsbUcgpxS8",
-      "xx": "https://images.newindianexpress.com/uploads/user/imagelibrary/2021/1/25/w900X450/tcs.jpg?w=400&dpr=2.6",
-      "totalComment": 0
-    },
-    {
-      "id": "5161f99d-c6b6-4c8e-a875-d3b510bb464b",
-      "userCreatedPostName": "first post of days",
-      "totalLike": 0,
-      "postDescription": "hiring for java developer",
-      "nameOfOrganization": "masai school",
-      "postCreatedTime": "2022-04-06T14:12:26.734Z",
-      "share": 0,
-      "totalComment": 0
-    },
-    {
-      "id": "582ba320-ab98-40db-a402-207392005ac0",
-      "userCreatedPostName": "first post of days",
-      "totalLike": 0,
-      "postDescription": "hiring for java developer",
-      "nameOfOrganization": "masai school",
-      "postCreatedTime": "2022-04-06T14:12:26.753Z",
-      "share": 0,
-      "totalComment": 0
-    },
-    {
-      "id": "f193f8de-9a03-4983-b6b0-e778794be6bb",
-      "userCreatedPostName": "first post of days",
-      "totalLike": 0,
-      "postDescription": "hiring for java developer",
-      "nameOfOrganization": "masai school",
-      "postCreatedTime": "2022-04-06T14:52:40.647Z",
+      "postCreatedTime": "2022-04-07T14:46:31.260Z",
       "share": 0,
       "totalComment": 0
     }

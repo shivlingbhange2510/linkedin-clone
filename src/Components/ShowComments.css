@@ -1,0 +1,54 @@
+.comment-main{
+    width:100%;
+     border:1px solid white !important;
+     background-color: white;
+     color:black !important;
+     display: flex;
+     flex-direction: column;
+}
+.comment-main > p{
+    color:black;
+}
+.congratulactions{
+    margin-top: 10px;
+
+}
+.userName{
+    font-weight:bold;
+}
+.input-comment-main{
+    width: 100%;
+    /* border:1px solid blue; */
+}
+.inputComment{
+    width:100% !important;
+    height:50px;
+    background-color: white;
+    border:1px solid gray;
+    
+    margin-bottom: 10px;
+    margin-top:5px;
+
+}
+div.input-comment-main input {
+    width: 100% !important;
+     height: 30px;
+      margin-bottom: 8px; 
+      border-radius: 33px;
+      font-size: 17px;
+}
+div.input-comment-main input {border:0;outline:0;}
+div.input-comment-main input:focus {
+    outline:none!important;
+padding-left:20px;
+}
+div.input-comment-main button {
+ width:120px;
+ height:30px;
+ border-radius: 25px;
+ background-color: blue;
+ cursor: pointer;
+ border:none;
+ color:white;
+ margin-bottom:10px;
+}

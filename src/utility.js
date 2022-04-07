@@ -13,7 +13,7 @@ export const dateDiffrance = (d1, d2) => {
         return (`${days} days`);
     } else {
         if (second < 60) {
-            return (`${second} second`)
+            return (`${second===0 ? 1 : second} second`)
         } else if (minutes > 0 && minutes <= 60) {
             return (`${minutes} min`)
         } else {
