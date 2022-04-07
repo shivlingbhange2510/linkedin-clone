@@ -1,7 +1,16 @@
 import React from 'react'
 import { Link } from "react-router-dom"
+import Profile from './Profile'
 
 export default function Navbar() {
+    React.useEffect(() => {
+        // var show = document.querySelector(".showProfile")
+        // show.style.display = "none !important"
+    },[])
+    function showprofilefun() {
+        // var show = document.querySelector(".showProfile")
+        // show.style.display = "block !important"
+    }
     return (
         <div>
             <section className="s1" id="home">
@@ -39,7 +48,7 @@ export default function Navbar() {
                                         <p>Jobs</p>
                                 </div>
                                 <div className="messaging">
-                                    <Link to="/">
+                                    <Link to="/message">
                                         <i className="fa-solid fa-comment-dots"></i>
                                         </Link>
                                         <p>Messaging</p>
@@ -50,7 +59,7 @@ export default function Navbar() {
                                         </Link>
                                         <p>Notifications</p>
                                 </div>
-                                <div className="me">
+                                <div className="me" onClick={showprofilefun}>
                                     <img src="/images/profileimage.jpeg" alt="Account Holder" />
                                     <p>Me <i className="fa-solid fa-caret-down"></i></p>
                                 </div>
@@ -69,6 +78,9 @@ export default function Navbar() {
                     </div>
                 </nav>
             </section>
+            {/* <div className="showProfile">
+                <Profile />
+            </div> */}
         </div>
     )
 }

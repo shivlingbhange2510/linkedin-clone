@@ -1,4 +1,4 @@
-
+import React from 'react'
 import Body from './Components/Body';
 import Jobs from './Components/Jobs';
 import Navbar from './Components/Navbar';
@@ -7,8 +7,10 @@ import "./style.css"
 import {Routes, Route} from "react-router-dom"
 import "./App.css"
 import Network from './Components/Network';
+import Message from './Components/Message';
 
 function App() {
+  
   return (
     <>
     <Navbar />
@@ -17,6 +19,7 @@ function App() {
       <Route path="/jobs" element= {<Jobs />} ></Route>
       <Route path="/network" element= {<Network />} ></Route>
       <Route path="/notification" element= {<Notification />} ></Route>
+      <Route path="/message" element= {<Message />} ></Route>
     </Routes>
     </>
   );
