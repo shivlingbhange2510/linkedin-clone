@@ -1,4 +1,4 @@
-import React,{useState,createContext} from 'react'
+import React,{useState} from 'react'
 // const Context=createContext()
 export const ImgTOBase64 = ({setImgData}) => {
     const [baseImage, setBaseImg]=useState('')
