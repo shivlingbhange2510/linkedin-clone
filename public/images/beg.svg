@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" id="briefcase-jobs-small-on-dark" data-supported-dps="48x48">
+  <path d="M1 26h46v13.91A3.05 3.05 0 0144 43H4.05a3.05 3.05 0 01-3-3.09z" fill="#788fa5"/>
+  <path d="M1.55 9h44.9A1.54 1.54 0 0148 10.55v15.31A3.11 3.11 0 0144.92 29H3.1A3.11 3.11 0 010 25.88V10.57A1.55 1.55 0 011.53 9z" fill="#f8c77e"/>
+  <rect x="20" y="25" width="8" height="8" rx="1.35" fill="#eef3f8"/>
+  <path d="M36 6a3 3 0 00-3-3H15a3 3 0 00-3 3v3h2V6a1 1 0 011-1h18a1 1 0 011 1v3h2z" fill="#9db3c8"/>
+</svg>
