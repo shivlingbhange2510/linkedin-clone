@@ -139,7 +139,7 @@ export const Posts = () => {
       {/* <button onClick={sendPost}>Post data</button> */}
       {postIs?.map((item) => {
         return (
-          <div className="post" style={{ marginBottom: "20px" }}>
+          <div key={item.id} className="post" style={{ marginBottom: "20px" }}>
             <br />
             {/* <button onClick={handleDispatch}>submit allPost</button> */}
             <div className="p1">
