@@ -8,21 +8,31 @@ import "./App.css"
 import Network from './Components/Network';
 import Message from './Components/Message';
 import Profile from './Components/Profile';
+import { useAuth0 } from '@auth0/auth0-react';
+import {LoginButton} from "./Auth0/LoginButton"
 
 function App() {
+  const {loginWithRedirect, isAuthenticated}=useAuth0()
+  const {user, } = useAuth0()
   return (
     <>
-    <Navbar />
-    <Routes>
-      <Route path="/" element= {<Body />} ></Route>
-      <Route path="/profile" element= {<Profile />} ></Route>
-      <Route path="/jobs" element= {<Jobs />} ></Route>
-      <Route path="/network" element= {<Network />} ></Route>
-      <Route path="/notification" element= {<Notification />} ></Route>
-      <Route path="/message" element= {<Message />} ></Route>
-    </Routes>
-    </>
-  );
+        {!isAuthenticated? <> <LoginButton /></>
+        :
+        <>
+        <Navbar />
+      <Routes>
+        <Route path="/" element= {<Body />} ></Route>
+        <Route path="/profile" element= {<Profile />} ></Route>
+        <Route path="/jobs" element= {<Jobs />} ></Route>
+        <Route path="/network" element= {<Network />} ></Route>
+        <Route path="/notification" element= {<Notification />} ></Route>
+        <Route path="/message" element= {<Message />} ></Route>
+      </Routes>
+      </>
+  }
+  </>
+    
+    );
 }
 
 export default App;

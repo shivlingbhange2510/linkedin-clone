@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 import { Todo } from './Todo/Todo'
+import {LogoutButton} from "../Auth0/LogoutButton"
+import { useAuth0 } from '@auth0/auth0-react';
 export default function Navbar() {
+    const {user, } = useAuth0()
     return (
         <div>
             <section className="s1" id="home">
@@ -53,7 +56,7 @@ export default function Navbar() {
                                 </div>
                                 <div className="me">
                                     <Link to="/profile">
-                                        <img src="/images/profileimage.jpeg" alt="Account Holder" />
+                                        <img src={user.picture} alt="Account Holder" />
                                         <p>Me <i className="fa-solid fa-caret-down"></i></p>
 
                                     </Link>
@@ -64,7 +67,7 @@ export default function Navbar() {
                                     <i className="fa-solid fa-table-cells"></i>
                                     <p>Work <i className="fa-solid fa-caret-down"></i></p>
                                 </div>
-                                <p className="premium">Try Premium for free</p>
+                                <LogoutButton />
                             </div>
                             <div className="elipseicon">
                                 <i className="fa-solid fa-ellipsis"></i>

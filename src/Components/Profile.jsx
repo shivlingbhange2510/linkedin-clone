@@ -1,6 +1,8 @@
 import React from 'react'
+import { useAuth0 } from '@auth0/auth0-react';
 
 export default function Profile() {
+    const {user, } = useAuth0()
     return (
         <section className="s8">
             <div className="s88">
@@ -10,14 +12,14 @@ export default function Profile() {
                         <div className="edit">
                             <i className="fa-solid fa-pen"></i>
                         </div>
-                        <img className="profile" src="./images/profileimage.jpeg" alt="Profile Image" />
+                        <img className="profile" src={user.picture} alt="Profile Image" />
                         <div className="d11">
                             <div className="pen">
                                 <i className="fa-solid fa-pen pen"></i>
                             </div>
                             <div className="d111">
                                 <div className="d1112">
-                                    <p className="username">User Name</p>
+                                    <p className="username">{user.nickname}</p>
                                     <p className="descirption">Aspiring Full Stack Web Development At Masai School</p>
                                 </div>
                                 <div className="d1113">

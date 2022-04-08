@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
 import {CreatePostBtn} from './CreatePostBtn';
 import {Posts} from './Posts'
-// import { useNavigate } from "react-router-dom";
 import Profile from './Profile';
 import {Link} from "react-router-dom"
 import {ImgTOBase64} from './Images/ImgTOBase64';
+import { useAuth0 } from '@auth0/auth0-react';
 export default function Body() {
     const [num, setNum] = useState(true);
     const [startpost, setstartpost] = useState(false)
     function startPost() {
         setstartpost(true)
     }
-    // let navigate = useNavigate();
+    const {user, } = useAuth0()
     
     function opennav() {
         var show = document.querySelector(".showmoretext")
@@ -36,11 +36,10 @@ export default function Body() {
                                     <img src="/images/profilebg.webp" alt="UserBackground" />
                                 </div>
                                 <div className="box12">
-                                    <img src="/images/profileimage.jpeg" alt="UserImage" />
-                                    <Link to="/profile"><b>User Name</b></Link>
+                                    <img src={user.picture} alt="UserImage" />
+                                    <Link to="/profile"><b>{user.nickname}</b></Link>
                                     {/* <img src="/images/profileimage.jpeg" alt="User Image" /> */}
                                     {/* <ImgTOBase64/> */}
-                                    <p><b>User Name</b></p>
                                     <p className="small">Aspiring Full Stack Web Development at Masai School</p>
                                 </div>
                             </div>
@@ -76,7 +75,7 @@ export default function Body() {
                         <div className="up">
                             <div className="d1">
                                 <div className="d2">
-                                    <img src="/images/profileimage.jpeg" alt="User Image" />
+                                    <img src={user.picture} alt="User Image" />
                                     <p onClick={startPost}>Start a post</p>
                                 </div>
                                 <div className="d3">

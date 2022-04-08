@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useSelector, useDispatch } from "react-redux";
 import {addsinglePost} from  "../Redux/AllPost/allPostAction";
 import {ImgTOBase64} from './Images/ImgTOBase64';
+import { useAuth0 } from '@auth0/auth0-react';
 
 export  function CreatePostBtn({startpost}) {
     const[imgData, setImgData]=useState('');
@@ -13,6 +14,7 @@ const[postDescription, setPosDescription]=useState('');
     const dispatch = useDispatch();
   //   console.log("postIs postIs.allPost *****  ", postIs);
     // const dispatch = useDispatch();
+    const {user, } = useAuth0()
     function exit() {
         startpost(false)
     }
@@ -82,9 +84,9 @@ xx= "c37d4d5e-3bcf-4783-b201-d6ffba31d32f";
                 <div className="d2">
                     <div className="d20">
                         {/* <ImgTOBase64 setImgData={setImgData} /> */}
-                        <img src="./images/profileimage.jpeg" alt="profileimage" />
+                        <img src={user.picture} alt="profileimage" />
                             <div className="d21">
-                                <p>User Name</p>
+                            <p>{user.nickname} </p>
                                 <p className="anymore">
                                     <i className="fa-solid fa-earth-americas"></i>
                                     Anyone
