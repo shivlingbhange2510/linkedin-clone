@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 
 export const dateDiffrance = (d1, d2) => {
     const date1 = new Date(d1);
@@ -20,8 +20,4 @@ export const dateDiffrance = (d1, d2) => {
             return (`${hours} hours`)
         }
     }
-}
-
-const postData = (data)=>{
-    // axios.post(`${baseUrl}/allpost`)
 }

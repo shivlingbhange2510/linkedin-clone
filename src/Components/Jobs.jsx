@@ -134,15 +134,15 @@ export default function Jobs() {
                     <div className="right2 mu-4 d2">
                         <footer>
                             <div className="foot">
-                                <a href="#">About</a> &nbsp; &nbsp;
-                                <a href="#">Accessibility</a> &nbsp; &nbsp;
-                                <a href="#">Help Center</a> &nbsp;
-                                <a href="#">Privacy & terms <i className="fa-solid fa-chevron-down"></i></a> &nbsp; &nbsp;
-                                <a href="#">Ad Choices</a> &nbsp; 
-                                <a href="#">Advertising</a> &nbsp; 
-                                <a href="#">Business Services <i className="fa-solid fa-chevron-down"></i></a> &nbsp; &nbsp;
-                                <a href="#">Get the Linkedin app</a> &nbsp; &nbsp;
-                                <a href="#">More</a> &nbsp; &nbsp;
+                                <a href="/">About</a> &nbsp; &nbsp;
+                                <a href="/">Accessibility</a> &nbsp; &nbsp;
+                                <a href="/">Help Center</a> &nbsp;
+                                <a href="/">Privacy & terms <i className="fa-solid fa-chevron-down"></i></a> &nbsp; &nbsp;
+                                <a href="/">Ad Choices</a> &nbsp; 
+                                <a href="/">Advertising</a> &nbsp; 
+                                <a href="/">Business Services <i className="fa-solid fa-chevron-down"></i></a> &nbsp; &nbsp;
+                                <a href="/">Get the Linkedin app</a> &nbsp; &nbsp;
+                                <a href="/">More</a> &nbsp; &nbsp;
                             </div>
                             <h5>Linked <i className="fa-brands fa-linkedin"></i> LinkedIn Corporation &#x24B8; 2022</h5>
                         </footer>

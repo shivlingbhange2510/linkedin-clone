@@ -21,7 +21,7 @@ export default function Notification() {
                         <div className="notify">
                             <div className="d1">
                                 <div className="img">
-                                    <img src="https://pbs.twimg.com/profile_images/1390604720738242563/gz6AcHua_400x400.jpg" alt="Profile image" />
+                                    <img src="https://pbs.twimg.com/profile_images/1390604720738242563/gz6AcHua_400x400.jpg" alt="Profileimage" />
                                 </div>
                                 <div className="details">
                                     <p>Welcome to Masai School.</p>
@@ -44,7 +44,7 @@ export default function Notification() {
                             </div>
                             <div className="d1">
                                 <div className="img">
-                                    <img src="https://pbs.twimg.com/profile_images/1390604720738242563/gz6AcHua_400x400.jpg" alt="Profile image" />
+                                    <img src="https://pbs.twimg.com/profile_images/1390604720738242563/gz6AcHua_400x400.jpg" alt="Profile" />
                                 </div>
                                 <div className="details">
                                     <p>Welcome to Masai School.</p>
@@ -67,7 +67,7 @@ export default function Notification() {
                             </div>
                             <div className="d1">
                                 <div className="img">
-                                    <img src="https://pbs.twimg.com/profile_images/1390604720738242563/gz6AcHua_400x400.jpg" alt="Profile image" />
+                                    <img src="https://pbs.twimg.com/profile_images/1390604720738242563/gz6AcHua_400x400.jpg" alt="Profile" />
                                 </div>
                                 <div className="details">
                                     <p>Welcome to Masai School.</p>
@@ -90,7 +90,7 @@ export default function Notification() {
                             </div>
                             <div className="d1">
                                 <div className="img">
-                                    <img src="https://pbs.twimg.com/profile_images/1390604720738242563/gz6AcHua_400x400.jpg" alt="Profile image" />
+                                    <img src="https://pbs.twimg.com/profile_images/1390604720738242563/gz6AcHua_400x400.jpg" alt="Profileimage" />
                                 </div>
                                 <div className="details">
                                     <p>Welcome to Masai School.</p>
@@ -113,7 +113,7 @@ export default function Notification() {
                             </div>
                             <div className="d1">
                                 <div className="img">
-                                    <img src="https://pbs.twimg.com/profile_images/1390604720738242563/gz6AcHua_400x400.jpg" alt="Profile image" />
+                                    <img src="https://pbs.twimg.com/profile_images/1390604720738242563/gz6AcHua_400x400.jpg" alt="Profile" />
                                 </div>
                                 <div className="details">
                                     <p>Welcome to Masai School.</p>
@@ -136,7 +136,7 @@ export default function Notification() {
                             </div>
                             <div className="d1">
                                 <div className="img">
-                                    <img src="https://pbs.twimg.com/profile_images/1390604720738242563/gz6AcHua_400x400.jpg" alt="Profile image" />
+                                    <img src="https://pbs.twimg.com/profile_images/1390604720738242563/gz6AcHua_400x400.jpg" alt="Profile" />
                                 </div>
                                 <div className="details">
                                     <p>Welcome to Masai School.</p>
@@ -159,7 +159,7 @@ export default function Notification() {
                             </div>
                             <div className="d1">
                                 <div className="img">
-                                    <img src="https://pbs.twimg.com/profile_images/1390604720738242563/gz6AcHua_400x400.jpg" alt="Profile image" />
+                                    <img src="https://pbs.twimg.com/profile_images/1390604720738242563/gz6AcHua_400x400.jpg" alt="Profileimage" />
                                 </div>
                                 <div className="details">
                                     <p>Welcome to Masai School.</p>
@@ -182,7 +182,7 @@ export default function Notification() {
                             </div>
                             <div className="d1">
                                 <div className="img">
-                                    <img src="https://pbs.twimg.com/profile_images/1390604720738242563/gz6AcHua_400x400.jpg" alt="Profile image" />
+                                    <img src="https://pbs.twimg.com/profile_images/1390604720738242563/gz6AcHua_400x400.jpg" alt="Profileimage" />
                                 </div>
                                 <div className="details">
                                     <p>Welcome to Masai School.</p>
@@ -205,7 +205,7 @@ export default function Notification() {
                             </div>
                             <div className="d1">
                                 <div className="img">
-                                    <img src="https://pbs.twimg.com/profile_images/1390604720738242563/gz6AcHua_400x400.jpg" alt="Profile image" />
+                                    <img src="https://pbs.twimg.com/profile_images/1390604720738242563/gz6AcHua_400x400.jpg" alt="Profileimage" />
                                 </div>
                                 <div className="details">
                                     <p>Welcome to Masai School.</p>
@@ -230,15 +230,15 @@ export default function Notification() {
                         <div className="right2 mu-4">
                             <footer>
                                 <div className="foot">
-                                    <a href="#">About</a> &nbsp; &nbsp;
-                                    <a href="#">Accessibility</a> &nbsp; &nbsp;
-                                    <a href="#">Help Center</a> &nbsp;
-                                    <a href="#">Privacy & terms <i className="fa-solid fa-chevron-down"></i></a> &nbsp; &nbsp;
-                                    <a href="#">Ad Choices</a> &nbsp;
-                                    <a href="#">Advertising</a> &nbsp;
-                                    <a href="#">Business Services <i className="fa-solid fa-chevron-down"></i></a> &nbsp; &nbsp;
-                                    <a href="#">Get the Linkedin app</a> &nbsp; &nbsp;
-                                    <a href="#">More</a> &nbsp; &nbsp;
+                                    <a href="/footer">About</a> &nbsp; &nbsp;
+                                    <a href="/footer">Accessibility</a> &nbsp; &nbsp;
+                                    <a href="/footer">Help Center</a> &nbsp;
+                                    <a href="/footer">Privacy and terms <i className="fa-solid fa-chevron-down"></i></a> &nbsp; &nbsp;
+                                    <a href="/footer">Ad Choices</a> &nbsp;
+                                    <a href="/footer">Advertising</a> &nbsp;
+                                    <a href="/footer">Business Services <i className="fa-solid fa-chevron-down"></i></a> &nbsp; &nbsp;
+                                    <a href="/footer">Get the Linkedin app</a> &nbsp; &nbsp;
+                                    <a href="/footer">More</a> &nbsp; &nbsp;
                                 </div>
                                 <h5>Linked <i className="fa-brands fa-linkedin"></i> LinkedIn Corporation &#x24B8; 2022</h5>
                             </footer>

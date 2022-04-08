@@ -1,5 +1,4 @@
-import React,{useState,createContext} from 'react'
-// const Context=createContext()
+import React,{useState} from 'react'
 export const ImgTOBase64 = ({setImgData}) => {
     const [baseImage, setBaseImg]=useState('')
     const uploadImage= async(e)=>{
