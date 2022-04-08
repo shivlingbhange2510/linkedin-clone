@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function CreatePostBtn({startpost}) {
+export  function CreatePostBtn({startpost}) {
     function exit() {
         startpost(false)
     }
@@ -14,7 +14,7 @@ export default function CreatePostBtn({startpost}) {
                 <hr />
                 <div className="d2">
                     <div className="d20">
-                        <img src="./images/profileimage.jpeg" alt="profile image" />
+                        <img src="./images/profileimage.jpeg" alt="profileimage" />
                             <div className="d21">
                                 <p>User Name</p>
                                 <p className="anymore">

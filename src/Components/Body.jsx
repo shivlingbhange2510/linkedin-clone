@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import CreatePostBtn from './CreatePostBtn';
-
+import {CreatePostBtn} from './CreatePostBtn';
+import {Posts} from './Posts'
 export default function Body() {
     const [num, setNum] = useState(true);
     const [startpost, setstartpost] = useState(false)
@@ -90,6 +90,8 @@ export default function Body() {
                                 </div>
                             </div>
                             <div className="d4">
+                            <Posts/>
+                             <br/>
                                 <div className="post">
                                     <div className="p1">
                                         <div className="postdata">

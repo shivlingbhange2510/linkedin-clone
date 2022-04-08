@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom"
-import Profile from './Profile'
-
+import { Todo } from './Todo/Todo'
 export default function Navbar() {
     React.useEffect(() => {
         // var show = document.querySelector(".showProfile")
@@ -17,6 +16,7 @@ export default function Navbar() {
                 <nav>
                     <div className="nav">
                         <div className="left">
+                            {/* <Todo/> */}
                             <div className="logo">
                                 <Link to="/">
                                     <i className="fa-brands fa-linkedin"></i>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+​
+    <style>
+        .s7{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.451);
+            padding-top: 20px;
+        }
+        .s7 .s77{
+            position: relative;
+            height: 370px;
+            width: 550px;
+            background: #1b2226;
+            border-radius: 8px;
+            color: #fff;
+            margin: 0 auto;
+        }
+        .s7 .s77 .d1{
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            font-size: 18px;
+        }
+        .s7 .s77 .d1 i{
+            padding: 10px 14px;
+            border-radius: 50%;
+        }
+        .s7 .s77 .d1 i:hover{
+            background: rgba(147, 147, 147, 0.445);
+        }
+        .s7 .s77 .d2 {
+            position: relative;
+            width: 100%;
+            padding: 15px 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        .s7 .s77 .d2 .d20{
+            position: relative;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .s7 .s77 .d2 img{
+            position: relative;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .s7 .s77 .d2 .d21{
+            position: relative;
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        .s7 .s77 .d2 .d21 .anymore{
+            padding: 6px 10px;
+            border: 1px solid #fff;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        .s7 .s77 .d2 .d21 .anymore:hover{
+            box-shadow: 1px 1px 1px #fff inset, -1px -1px 1px #fff inset;
+        }
+        .s7 .s77 .d2 .d22 textarea{
+            position: relative;
+            width: 100%;
+            background: none;
+            border: none;
+            outline: none;
+            margin-top: 10px;
+            color: #fff;
+            font-style: 22px;
+            height: 100px;
+        }
+        .s7 .s77 .d2 .d22 textarea::placeholder{
+            color: rgb(164, 164, 164);
+            font-style: 20px;
+        }
+        .s7 .s77 .d2 .d23 {
+            color: #70b4f8;
+            padding: 6px;
+            border-radius: 4px;
+            width: 100px;
+            cursor: pointer;
+        }
+        .s7 .s77 .d2 .d23:hover {
+            background: #70b4f846;
+​
+        }
+        .s7 .s77 .d3 {
+            position: relative;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .s7 .s77 .d3 .d31{
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .s7 .s77 .d3 .d31 i{
+            position: relative;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .s7 .s77 .d3 .d31 p{
+            position: relative;
+            padding: 0 6px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        .s7 .s77 .d3 .d32 button{
+            padding: 6px 10px;
+            border-radius: 25px;
+            background: none;
+            border: none;
+            outline: none;
+            color: #fff;
+            font-size: 17px;
+        }
+        .s7 .s77 .d3 .d32 button:hover{
+            background: rgba(147, 147, 147, 0.46);
+        }
+        .s7 .s77 .d3 .d31 i:hover, .s7 .s77 .d3 .d31 p:hover{
+            background: rgba(137, 137, 137, 0.512);
+        }
+​
+    </style>
+​
+</head>
+<body>
+    <section class="s7">
+        <div class="s77">
+            <div class="d1">
+                <p>Create a Post</p>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <hr />
+            <div class="d2">
+                <div class="d20">
+                    <img src="./images/profileimage.jpeg" alt="profile image">
+                    <div class="d21">
+                        <p>User Name</p>
+                        <p class="anymore">
+                            <i class="fa-solid fa-earth-americas"></i>
+                            Anyone
+                            <i class="fa-solid fa-caret-down"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="d22">
+                    <textarea placeholder="What do you want to talk about?"></textarea>
+                </div>
+                <div class="d23">
+                    <p class="hastag">Add Hastag</p>
+                </div>
+            </div>
+            <div class="d3">
+                <div class="d31">
+                    <i class="fa-solid fa-image"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-solid fa-file"></i>
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <i class="fa-solid fa-sun"></i>
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <i class="fa-solid fa-ellipsis"></i>
+                    &nbsp; | &nbsp;
+                    <p>
+                        <i class="fa-solid fa-earth-africa"></i>
+                         Anyone
+                    </p>
+                </div>
+                <div class="d32">
+                    <button>Post</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
