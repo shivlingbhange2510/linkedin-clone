@@ -19,7 +19,7 @@ export const allPostReducer = (store=initialState, action )=>{
             }
         case  ADD_POST:
             return{
-                ...store, allPost:action.payload
+                ...store, allPost:[...store.allPost,action.payload]
             }    
         case DELETE_POST:
             return{

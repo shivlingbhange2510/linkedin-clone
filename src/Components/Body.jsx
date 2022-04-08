@@ -4,6 +4,7 @@ import {Posts} from './Posts'
 // import { useNavigate } from "react-router-dom";
 import Profile from './Profile';
 import {Link} from "react-router-dom"
+import {ImgTOBase64} from './Images/ImgTOBase64';
 export default function Body() {
     const [num, setNum] = useState(true);
     const [startpost, setstartpost] = useState(false)
@@ -37,6 +38,9 @@ export default function Body() {
                                 <div className="box12">
                                     <img src="/images/profileimage.jpeg" alt="UserImage" />
                                     <Link to="/profile"><b>User Name</b></Link>
+                                    {/* <img src="/images/profileimage.jpeg" alt="User Image" /> */}
+                                    {/* <ImgTOBase64/> */}
+                                    <p><b>User Name</b></p>
                                     <p className="small">Aspiring Full Stack Web Development at Masai School</p>
                                 </div>
                             </div>
