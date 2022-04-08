@@ -4,17 +4,19 @@ import { baseUrl } from "../config";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { dateDiffrance } from "../utility";
-import {NotiFicationMess} from './NotiFicationMess'
+import { NotiFicationMess } from './NotiFicationMess'
 import { GetAllPost } from "../ApiServices/ApiFetch";
 import { ShowComments } from "./ShowComments";
-import { getAllPost2,deleteCommet,deletPost,addsinglePost, show1posttypeAllComment,
-     showCommentInputBox, upadtePostLike,addComentToPost } from "../Redux/AllPost/allPostAction";
+import {
+  getAllPost2, deleteCommet, deletPost, addsinglePost, show1posttypeAllComment,
+  showCommentInputBox, upadtePostLike, addComentToPost
+} from "../Redux/AllPost/allPostAction";
 export const Posts = () => {
   const [allPost, setAllPost] = useState([]);
   const [sendComment, setSendComment] = useState("");
-  const[viewComment, setViewComment]=useState(false)
+  const [viewComment, setViewComment] = useState(false)
   let postIs = useSelector((store) => store.allPost.allPost);
-//   console.log("postIs postIs.allPost *****  ", postIs);
+  //   console.log("postIs postIs.allPost *****  ", postIs);
   const dispatch = useDispatch();
   const postData = () => {
     axios.get(`${baseUrl}/allpost`).then((res) => {
@@ -43,13 +45,13 @@ export const Posts = () => {
       commentMessage: [
         {
           id: uuid(),
-          userProfilePic: "",
+          userProfilePic: "https://picsum.photos/200/150",
           userName: "shahjad ",
           userPosition: "flutter developer at amazon",
           commentTime: "2022-05-06",
           commentDecription: "own created for testing"
         }
-        ],
+      ],
       userCreatedPostName: "first post of days",
       totalLike: 0,
       postDescription: "hiring for java developer",
@@ -63,8 +65,8 @@ export const Posts = () => {
       .then((res) => {
         //   dispatch(addsinglePost([postData, ...postIs]))
         console.log("post api data after posting ", res);
-        if(res.status==200){
-            postData()
+        if (res.status == 200) {
+          postData()
         }
       })
       .catch((er) => {
@@ -83,44 +85,50 @@ export const Posts = () => {
   };
 
   const sendcommentOnPost = (id) => {
-    const c=  {userProfilePic :"",
+    const c = {
+      userProfilePic: "",
       id: uuid(),
-    userName:"meera karale",
-    userPosition:"working at codewave",
-    userActivityTrack:'',
-    commentTime:new Date(),
-    commentDecription : sendComment};
-    const updatedComment= postIs.map((item) =>{
-return(item.id !== id ? item : { ...item, commentMessage: [c, ...item?.commentMessage],  commentStatus: true}) }
-  );
-  dispatch(addComentToPost(updatedComment))
+      userName: "meera karale",
+      userPosition: "working at codewave",
+      userActivityTrack: '',
+      commentTime: new Date(),
+      commentDecription: sendComment
+    };
+    const updatedComment = postIs.map((item) => {
+      return (item.id !== id ? item : { ...item, commentMessage: [c, ...item?.commentMessage], commentStatus: true })
+    }
+    );
+    dispatch(addComentToPost(updatedComment))
     setSendComment("");
   };
-  const showComments=(id)=>{
-        const updatedCommentShow = postIs.map((item) =>
-      item.id !== id ? item : { ...item,
-         commentStatus: !item?.commentStatus }
+  const showComments = (id) => {
+    const updatedCommentShow = postIs.map((item) =>
+      item.id !== id ? item : {
+        ...item,
+        commentStatus: !item?.commentStatus
+      }
     );
-     dispatch(show1posttypeAllComment(updatedCommentShow))
-    }
+    dispatch(show1posttypeAllComment(updatedCommentShow))
+  }
 
-    const showCommetInput=(id)=>{
-        const data = postIs.map((item) =>
-        item.id !== id ? item : { ...item, showCommentInput: !item?.showCommentInput
-         })
-        dispatch(showCommentInputBox(data))
-    }
-  const handleDeletComm=(id2, msg)=>{
+  const showCommetInput = (id) => {
+    const data = postIs.map((item) =>
+      item.id !== id ? item : {
+        ...item, showCommentInput: !item?.showCommentInput
+      })
+    dispatch(showCommentInputBox(data))
+  }
+  const handleDeletComm = (id2, msg) => {
     // dispatch(deleteCommet(data))
     const data = postIs.map((item) =>
-    item.id !== id2 ? item : { ...item, commentMessage: item?.commentMessage.filter((val)=>val.commentDecription!==msg)})
-    console.log('deleted comment', data, );
-        dispatch(deleteCommet(data))
+      item.id !== id2 ? item : { ...item, commentMessage: item?.commentMessage.filter((val) => val.commentDecription !== msg) })
+    console.log('deleted comment', data,);
+    dispatch(deleteCommet(data))
 
   }
-  const handleDeletePost=(id)=>{
-   const updatedData= postIs.filter((item)=>item.id!==id)
-      dispatch(deletPost(updatedData))
+  const handleDeletePost = (id) => {
+    const updatedData = postIs.filter((item) => item.id !== id)
+    dispatch(deletPost(updatedData))
   }
 
   return (
@@ -138,14 +146,15 @@ return(item.id !== id ? item : { ...item, commentMessage: [c, ...item?.commentMe
                     <img src="/images/profileimage.jpeg" alt="User Profile" />
                   </div>
                   <div className="l2">
-                    <p>{item.userCreatedPostName} ⭐</p> 
-                    <button onClick={()=>{handleDeletePost(item.id)}}>
-                        <NotiFicationMess msg={"post deleted succesfully"} btn={"deletd post"}/>
+                    <p>{item.userCreatedPostName} ⭐</p>
+                    <button style={{ border: "1px solid #fff", background: "#1b2226" }} onClick={() => { handleDeletePost(item.id) }}>
+                      <NotiFicationMess msg={"post deleted succesfully"} btn={"deletd post"} />
                     </button>
                     <p className="small">{item.nameOfOrganization}</p>
                     <p className="small">
                       {dateDiffrance(new Date(), item.postCreatedTime)} ago
                     </p>
+                    <p style={{ marginBottom: "20px" }}> {item.postDescription} </p>
                   </div>
                 </div>
                 <p className="righttext">
@@ -154,14 +163,14 @@ return(item.id !== id ? item : { ...item, commentMessage: [c, ...item?.commentMe
               </div>
             </div>
             <div className="p2">
-              <p> {item.postDescription} </p>
               {!item.postImage ? (
                 <h1>Loading .......</h1>
               ) : (
                 <img
-                  width="450px"
-                  height="300px"
+                  width="100%"
+                  height="100%"
                   src={`${item.postImage}`}
+                  // src={`https://picsum.photos/200/150`}
                   alt="PostImage"
                 />
               )}
@@ -174,7 +183,7 @@ return(item.id !== id ? item : { ...item, commentMessage: [c, ...item?.commentMe
                   <i class="fa-solid fa-hands-clapping i3"></i>
                   <span> {item.totalLike} Likes</span>
                 </p>
-                <p onClick={ ()=>{showComments(item.id)}} className="small">
+                <p onClick={() => { showComments(item.id) }} className="small">
                   {item.commentMessage?.length} Comments b . 15 Shares
                 </p>
               </div>
@@ -188,7 +197,7 @@ return(item.id !== id ? item : { ...item, commentMessage: [c, ...item?.commentMe
                 >
                   <i class="fa-solid fa-thumbs-up"></i> Like
                 </button>
-                <button onClick={ ()=>{showCommetInput(item.id)}} className="commentbtn">
+                <button onClick={() => { showCommetInput(item.id) }} className="commentbtn">
                   <i class="fa-solid fa-comment-dots"></i> Comments
                 </button>
                 <button className="sharebtn">
@@ -199,9 +208,9 @@ return(item.id !== id ? item : { ...item, commentMessage: [c, ...item?.commentMe
                 </button>
               </div>
             </div>
-          
+
             <div>
-            {item?.showCommentInput&&(<div className="input-comment-main">
+              {item?.showCommentInput && (<div className="input-comment-main">
                 <input
                   type="text"
                   value={sendComment}
@@ -209,48 +218,53 @@ return(item.id !== id ? item : { ...item, commentMessage: [c, ...item?.commentMe
                   clasName="inputComment"
                 />
                 {sendComment !== "" && (
-                  <button onClick={()=>sendcommentOnPost(item.id)}>post comment </button>
+                  <button onClick={() => sendcommentOnPost(item.id)}>post comment </button>
                 )}
               </div>)
-                }
-            {
-              item?.commentStatus&& item?.commentMessage?.length!==0?  item?.commentMessage?.map((val)=>{
-                    return(
-                        <>
-                        <div
+              }
+              {
+                item?.commentStatus && item?.commentMessage?.length !== 0 ? item?.commentMessage?.map((val) => {
+                  return (
+                    <>
+                      <hr />
+                      <br />
+                      <button onClick={() => {
+                        handleDeletComm(
+                          item.id || item.commentDecription, val.commentDecription)
+                      }}>
+                        <NotiFicationMess msg={"Delete this Comment"} btn={"deletd comment"} />
+                      </button>
+                      <div
                         className="comment-main"
-                        style={{ width: "100%", border: "1px solid white !important" }}
+                        style={{ width: "100%", border: "1px solid white !important", display: "flex", flexDirection: "row", marginTop : "10px" }}
                       >
-                          <button onClick={ ()=>{handleDeletComm(
-                              item.id||item.commentDecription, val.commentDecription)} }> 
-                          {/* delete */}
-                          <NotiFicationMess msg={"comment deleted succesfully"} btn={"deletd comment"}/>
-                           </button>
-                        <div>
+                        <div style={{ margin: "6px 0 0 0" }}>
                           <img
-                            width="20px"
-                            height="20px"
-                            src="#"
+                            width="40px"
+                            height="40px"
+                            style={{ borderRadius: "50%" }}
+                            src="/images/profileimage.jpeg"
                             alt="userProfile"
                           />
                         </div>
-                        <p className="userName"> {val.userName} </p>
-                        <p> {val.userPosition} </p>
-                        <p> {dateDiffrance(val.commentTime, new Date() )} </p>
-                        <p>this is comments part</p>
-                        <div className="congratulactions">
-                        {val.commentDecription}
+                        <div style={{marginLeft : "10px", display : "flex" , flexDirection : "column", background:"#3c4345", padding : "10px", borderRadius : "0 6px 6px 6px", width : "100%"}}>
+                          <p className="userName"> {val.userName} </p>
+                          <p className="small"> {val.userPosition} </p>
+                          <p className="small"> {dateDiffrance(val.commentTime, new Date())} </p>
+                          <div className="congratulactions">
+                            {val.commentDecription}
+                          </div>
                         </div>
                       </div>
-                      <div style={{backgroundColor:'blue !important'}}> <br/></div>
-                      </>
-                    )
+                      <div style={{ backgroundColor: 'blue !important' }}> <br /></div>
+                    </>
+                  )
                 })
-                : null
-            }
-              
+                  : null
+              }
+
             </div>
-            
+
           </div>
         );
       })}

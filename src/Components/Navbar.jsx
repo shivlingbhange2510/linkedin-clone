@@ -40,7 +40,7 @@ export default function Navbar() {
                                         <p>Jobs</p>
                                 </div>
                                 <div className="messaging">
-                                    <Link to="/">
+                                    <Link to="/message">
                                         <i className="fa-solid fa-comment-dots"></i>
                                         </Link>
                                         <p>Messaging</p>
@@ -52,8 +52,11 @@ export default function Navbar() {
                                         <p>Notifications</p>
                                 </div>
                                 <div className="me">
-                                    <img src="/images/profileimage.jpeg" alt="Account Holder" />
-                                    <p>Me <i className="fa-solid fa-caret-down"></i></p>
+                                    <Link to="/profile">
+                                        <img src="/images/profileimage.jpeg" alt="Account Holder" />
+                                        <p>Me <i className="fa-solid fa-caret-down"></i></p>
+
+                                    </Link>
                                 </div>
                             </div>
                             <div className="logos1">
