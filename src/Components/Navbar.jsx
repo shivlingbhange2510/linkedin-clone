@@ -67,7 +67,9 @@ export default function Navbar() {
                                     <i className="fa-solid fa-table-cells"></i>
                                     <p>Work <i className="fa-solid fa-caret-down"></i></p>
                                 </div>
-                                <LogoutButton />
+                                <div className="logoutbtn">
+                                    <LogoutButton />
+                                </div>
                             </div>
                             <div className="elipseicon">
                                 <i className="fa-solid fa-ellipsis"></i>

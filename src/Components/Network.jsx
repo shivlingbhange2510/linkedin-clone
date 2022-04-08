@@ -1,8 +1,10 @@
 import React from 'react'
+import { useAuth0 } from '@auth0/auth0-react';
 
 export default function Network() {
     const [num, setNum] = React.useState(true)
     const [list, setList] = React.useState([])
+    const {user, } = useAuth0()
 
     React.useEffect(() => {
         fetch(`http://localhost:3001/userdata`)
@@ -79,9 +81,10 @@ export default function Network() {
                         <hr />
                         <div className="d5">
                             <p className="addpersonal">Add personal contacts </p>
+                            <p style={{textAlign : "center"}}>{user.name}</p>
                             <p className="small align-centre">We’ll periodically import and store your contacts to help you and others connect. You choose who to connect to and who to invite.   <span className="link"> Learn more</span></p>
                             <div className="mail">
-                                <p>abc@gmail.com</p>
+                                <p>{user.name}</p>
                             </div>
                             <button className="continue">Continue</button>
                             <p className="moreoption">More Option</p>

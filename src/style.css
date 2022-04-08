@@ -2372,7 +2372,7 @@ body{
     }
 }
 @media (max-width : 560px) {
-    .s1 .nav .right .logos1 {
+    .s1 .nav .right .logos1 .navbar {
         display: none;
     }
     .s1 .nav .right .elipseicon{
@@ -2384,6 +2384,9 @@ body{
     .s2 .body .right{
         margin: 0;
         width: 100%;
+    }
+    .s2 .body .right .up .d4 .post .p3 .btns button{
+        font-size: 12px;
     }
     .s2 .body {
         display: flex;
@@ -2419,6 +2422,21 @@ body{
     }
     .s6 .s66 .left .l2 {
         width: 100%;
+    }
+    .s8 .s88{
+        width: 100%;
+    }
+    .s8 .s88 .left .d1 .profile {
+        top: 29%;
+        left: 20px;
+        height: 100px;
+        width: 100px;
+    }
+    
+    .s8 .s88 .left .d11 .d111 {
+        margin-top: 0;
+        width: 100%;
+        height: 75px;
     }
     
 }

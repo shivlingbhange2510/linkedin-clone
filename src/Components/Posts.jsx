@@ -148,7 +148,7 @@ export const Posts = () => {
                   <div className="l2">
                     <p>{item.userCreatedPostName} ⭐</p>
                     <button style={{ border: "1px solid #fff", background: "#1b2226" }} onClick={() => { handleDeletePost(item.id) }}>
-                      <NotiFicationMess msg={"post deleted succesfully"} btn={"deletd post"} />
+                      <NotiFicationMess msg={"Delete Post"} btn={"deletd post"} />
                     </button>
                     <p className="small">{item.nameOfOrganization}</p>
                     <p className="small">
@@ -158,6 +158,7 @@ export const Posts = () => {
                   </div>
                 </div>
                 <p className="righttext">
+                  <i class="fa-solid fa-bookmark"></i>
                   <i class="fa-solid fa-ellipsis"></i>
                 </p>
               </div>

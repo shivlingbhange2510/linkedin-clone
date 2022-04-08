@@ -17,10 +17,10 @@ export default function Body() {
         var show = document.querySelector(".showmoretext")
         if (num) {
             setNum(!num)
-            show.innerHTML = `<p>Show more <i className="fa-solid fa-chevron-down"></i></p>`
+            show.innerHTML = `<p>Show more <i class="fa-solid fa-chevron-down"></i></p>`
         } else {
             setNum(!num)
-            show.innerHTML = `<p>Show less <i className="fa-solid fa-chevron-up"></i></p>`
+            show.innerHTML = `<p>Show less <i class="fa-solid fa-chevron-up"></i></p>`
         }
     }
 
