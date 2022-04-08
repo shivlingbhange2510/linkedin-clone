@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom"
-import { Todo } from './Todo/Todo'
+// import { Todo } from './Todo/Todo'
 import {LogoutButton} from "../Auth0/LogoutButton"
 import { useAuth0 } from '@auth0/auth0-react';
 export default function Navbar() {

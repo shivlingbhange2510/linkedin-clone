@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import {CreatePostBtn} from './CreatePostBtn';
 import {Posts} from './Posts'
-import Profile from './Profile';
+// import Profile from './Profile';
 import {Link} from "react-router-dom"
-import {ImgTOBase64} from './Images/ImgTOBase64';
+// import {ImgTOBase64} from './Images/ImgTOBase64';
 import { useAuth0 } from '@auth0/auth0-react';
 export default function Body() {
     const [num, setNum] = useState(true);
@@ -75,7 +75,7 @@ export default function Body() {
                         <div className="up">
                             <div className="d1">
                                 <div className="d2">
-                                    <img src={user.picture} alt="User Image" />
+                                    <img src={user.picture} alt="UserImage" />
                                     <p onClick={startPost}>Start a post</p>
                                 </div>
                                 <div className="d3">
@@ -124,15 +124,15 @@ export default function Body() {
                             <div className="right2">
                                 <footer>
                                     <div className="foot">
-                                        <a href="#">About</a> &nbsp; &nbsp;
-                                        <a href="#">Accessibility</a> &nbsp; &nbsp;
-                                        <a href="#">Help Center</a> &nbsp;
-                                        <a href="#">Privacy & terms <i className="fa-solid fa-chevron-down"></i></a> &nbsp; &nbsp;
-                                        <a href="#">Ad Choices</a> &nbsp;
-                                        <a href="#">Advertising</a> &nbsp;
-                                        <a href="#">Business Services <i className="fa-solid fa-chevron-down"></i></a> &nbsp; &nbsp;
-                                        <a href="#">Get the Linkedin app</a> &nbsp; &nbsp;
-                                        <a href="#">More</a> &nbsp; &nbsp;
+                                        <a href="/">About</a> &nbsp; &nbsp;
+                                        <a href="/">Accessibility</a> &nbsp; &nbsp;
+                                        <a href="/">Help Center</a> &nbsp;
+                                        <a href="/">Privacy & terms <i className="fa-solid fa-chevron-down"></i></a> &nbsp; &nbsp;
+                                        <a href="/">Ad Choices</a> &nbsp;
+                                        <a href="/">Advertising</a> &nbsp;
+                                        <a href="/">Business Services <i className="fa-solid fa-chevron-down"></i></a> &nbsp; &nbsp;
+                                        <a href="/">Get the Linkedin app</a> &nbsp; &nbsp;
+                                        <a href="/">More</a> &nbsp; &nbsp;
                                     </div>
                                     <h5>Linked <i className="fa-brands fa-linkedin"></i> LinkedIn Corporation &#x24B8; 2022</h5>
                                 </footer>

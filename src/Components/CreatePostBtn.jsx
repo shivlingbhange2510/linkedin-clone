@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { v4 as uuid } from "uuid";
 import { baseUrl } from "../config";
 import axios from 'axios';
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import {addsinglePost} from  "../Redux/AllPost/allPostAction";
 import {ImgTOBase64} from './Images/ImgTOBase64';
 import { useAuth0 } from '@auth0/auth0-react';
@@ -10,7 +10,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 export  function CreatePostBtn({startpost}) {
     const[imgData, setImgData]=useState('');
 const[postDescription, setPosDescription]=useState('');
-  let postIs = useSelector((store) => store.allPost.allPost);
+//   let postIs = useSelector((store) => store.allPost.allPost);
     const dispatch = useDispatch();
   //   console.log("postIs postIs.allPost *****  ", postIs);
     // const dispatch = useDispatch();
@@ -20,15 +20,16 @@ const[postDescription, setPosDescription]=useState('');
     }
 let xx=  "ac877d11-505c-4b4a-91e1-34092181ed51";
 xx= "c37d4d5e-3bcf-4783-b201-d6ffba31d32f";
-    const postDelete=()=>{
-        axios.delete(`${baseUrl}/allpost/${xx}`)
-        .then((res)=>{
-            console.log('delete api res is ', res);
-        }).catch((er)=>{
-            console.log('delete api error is  ', er);
+console.log('xx', xx)
+    // const postDelete=()=>{
+    //     axios.delete(`${baseUrl}/allpost/${xx}`)
+    //     .then((res)=>{
+    //         console.log('delete api res is ', res);
+    //     }).catch((er)=>{
+    //         console.log('delete api error is  ', er);
 
-        })
-    }
+    //     })
+    // }
     const sendPost = () => {
         const postData = {
           id: uuid(),

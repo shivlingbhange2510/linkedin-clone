@@ -12,8 +12,8 @@ import { useAuth0 } from '@auth0/auth0-react';
 import {LoginButton} from "./Auth0/LoginButton"
 
 function App() {
-  const {loginWithRedirect, isAuthenticated}=useAuth0()
-  const {user, } = useAuth0()
+  const { isAuthenticated}=useAuth0()
+  // const {user, } = useAuth0()
   return (
     <>
         {!isAuthenticated? <> <LoginButton /></>

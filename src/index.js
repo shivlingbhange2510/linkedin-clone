@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { Auth0Provider } from '@auth0/auth0-react'
-import reportWebVitals from './reportWebVitals';
+// import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 import { store } from './Redux/store';
 import { Provider } from 'react-redux';
-import { LoginButton } from "./Auth0/LoginButton"
+// import { LoginButton } from "./Auth0/LoginButton"
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 

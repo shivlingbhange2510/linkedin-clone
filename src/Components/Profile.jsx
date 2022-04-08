@@ -8,11 +8,11 @@ export default function Profile() {
             <div className="s88">
                 <div className="left">
                     <div className="d1">
-                        <img src="./images/profilebg.webp" alt="Background Image" />
+                        <img src="./images/profilebg.webp" alt="BackgroundImage" />
                         <div className="edit">
                             <i className="fa-solid fa-pen"></i>
                         </div>
-                        <img className="profile" src={user.picture} alt="Profile Image" />
+                        <img className="profile" src={user.picture} alt="ProfileImage" />
                         <div className="d11">
                             <div className="pen">
                                 <i className="fa-solid fa-pen pen"></i>
@@ -152,7 +152,7 @@ export default function Profile() {
                         <p className="heading"><b>People also viewed</b></p>
                         <div className="cards">
                             <div className="card1">
-                                <img src="./images/profileimage.jpeg" alt="Profile Image" />
+                                <img src="./images/profileimage.jpeg" alt="ProfileImage" />
                                 <div className="card12">
                                     <p className="link">User 1</p>
                                     <p className="small">Full Stack Web Developer</p>
@@ -161,7 +161,7 @@ export default function Profile() {
                                 </div>
                             </div>
                             <div className="card1">
-                                <img src="./images/profileimage.jpeg" alt="Profile Image" />
+                                <img src="./images/profileimage.jpeg" alt="ProfileImage" />
                                 <div className="card12">
                                     <p className="link">User 2</p>
                                     <p className="small">Front-end Developer</p>
@@ -176,7 +176,7 @@ export default function Profile() {
                         <p className="heading"><b>People you may know</b></p>
                         <div className="cards">
                             <div className="card1">
-                                <img src="./images/profileimage.jpeg" alt="Profile Image" />
+                                <img src="./images/profileimage.jpeg" alt="ProfileImage" />
                                 <div className="card12">
                                     <p className="link">User 1</p>
                                     <p className="small">Full Stack Web Developer</p>
@@ -185,7 +185,7 @@ export default function Profile() {
                                 </div>
                             </div>
                             <div className="card1">
-                                <img src="./images/profileimage.jpeg" alt="Profile Image" />
+                                <img src="./images/profileimage.jpeg" alt="ProfileImage" />
                                 <div className="card12">
                                     <p className="link">User 2</p>
                                     <p className="small">Java Developer</p>
@@ -201,19 +201,19 @@ export default function Profile() {
                         <p className="curdef">Add new skills with these courses, free for 24 hours</p>
                         <div className="cards">
                             <div className="card1">
-                                <img src="./images/profilebg.webp" alt="Image" />
+                                <img src="./images/profilebg.webp" alt="uImage" />
                                 <div className="card12">
                                     <p>Electron: Building Cross Platform Dekstop Apps</p>
                                 </div>
                             </div>
                             <div className="card1">
-                                <img src="./images/profilebg.webp" alt="Image" />
+                                <img src="./images/profilebg.webp" alt="jImage" />
                                 <div className="card12">
                                     <p>React: Creating and Hosting a Full-Stack Site</p>
                                 </div>
                             </div>
                             <div className="card1">
-                                <img src="./images/profilebg.webp" alt="Image" />
+                                <img src="./images/profilebg.webp" alt="lImage" />
                                 <div className="card12">
                                     <p>Using Python with Excel</p>
                                 </div>

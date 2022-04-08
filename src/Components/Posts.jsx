@@ -5,74 +5,77 @@ import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { dateDiffrance } from "../utility";
 import { NotiFicationMess } from './NotiFicationMess'
-import { GetAllPost } from "../ApiServices/ApiFetch";
-import { ShowComments } from "./ShowComments";
+// import { GetAllPost } from "../ApiServices/ApiFetch";
+// import { ShowComments } from "./ShowComments";
 import {
-  getAllPost2, deleteCommet, deletPost, addsinglePost, show1posttypeAllComment,
+  getAllPost2, deleteCommet, deletPost, show1posttypeAllComment,
   showCommentInputBox, upadtePostLike, addComentToPost
 } from "../Redux/AllPost/allPostAction";
 export const Posts = () => {
   const [allPost, setAllPost] = useState([]);
+  console.log(allPost)
   const [sendComment, setSendComment] = useState("");
-  const [viewComment, setViewComment] = useState(false)
+  // const [viewComment, setViewComment] = useState(false)
   let postIs = useSelector((store) => store.allPost.allPost);
   //   console.log("postIs postIs.allPost *****  ", postIs);
   const dispatch = useDispatch();
-  const postData = () => {
-    axios.get(`${baseUrl}/allpost`).then((res) => {
-      console.log("res allpost", res);
-      if (res?.data?.length > 0) {
-        console.log("dispatch  action ");
-        dispatch(getAllPost2(res?.data));
-        setAllPost(res.data);
-      }
-    });
-  };
+ 
 
 
   useEffect(() => {
-    postData();
-  }, []);
-  const handleDispatch = () => {
-    dispatch(getAllPost2(allPost));
-  };
-
-  const sendPost = () => {
-    const postData = {
-      id: uuid(),
-      commentStatus: false,
-      showCommentInput: false,
-      commentMessage: [
-        {
-          id: uuid(),
-          userProfilePic: "https://picsum.photos/200/150",
-          userName: "shahjad ",
-          userPosition: "flutter developer at amazon",
-          commentTime: "2022-05-06",
-          commentDecription: "own created for testing"
+    const postData = () => {
+      axios.get(`${baseUrl}/allpost`).then((res) => {
+        console.log("res allpost", res);
+        if (res?.data?.length > 0) {
+          console.log("dispatch  action ");
+          dispatch(getAllPost2(res?.data));
+          setAllPost(res.data);
         }
-      ],
-      userCreatedPostName: "first post of days",
-      totalLike: 0,
-      postDescription: "hiring for java developer",
-      nameOfOrganization: "masai school",
-      postCreatedTime: new Date(),
-      share: 0,
-      totalComment: 0,
-    };
-    axios
-      .post(`${baseUrl}/allpost`, postData)
-      .then((res) => {
-        //   dispatch(addsinglePost([postData, ...postIs]))
-        console.log("post api data after posting ", res);
-        if (res.status == 200) {
-          postData()
-        }
-      })
-      .catch((er) => {
-        console.log("post api error ", er);
       });
-  };
+    };
+    postData()
+  }, [dispatch]);
+
+  // const handleDispatch = () => {
+  //   dispatch(getAllPost2(allPost));
+  // };
+
+  // const sendPost = () => {
+  //   const postData = {
+  //     id: uuid(),
+  //     commentStatus: false,
+  //     showCommentInput: false,
+  //     commentMessage: [
+  //       {
+  //         id: uuid(),
+  //         userProfilePic: "https://picsum.photos/200/150",
+  //         userName: "shahjad ",
+  //         userPosition: "flutter developer at amazon",
+  //         commentTime: "2022-05-06",
+  //         commentDecription: "own created for testing"
+  //       }
+  //     ],
+  //     userCreatedPostName: "first post of days",
+  //     totalLike: 0,
+  //     postDescription: "hiring for java developer",
+  //     nameOfOrganization: "masai school",
+  //     postCreatedTime: new Date(),
+  //     share: 0,
+  //     totalComment: 0,
+  //   };
+  //   axios
+  //     .post(`${baseUrl}/allpost`, postData)
+  //     .then((res) => {
+  //       //   dispatch(addsinglePost([postData, ...postIs]))
+  //       console.log("post api data after posting ", res);
+  //       if (res.status === 200) {
+  //         postData()
+  //       }
+  //     })
+  //     .catch((er) => {
+  //       console.log("post api error ", er);
+  //     });
+  // };
 
   const handlePostLike = (id) => {
     const updatedData = postIs.map((item) =>
