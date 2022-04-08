@@ -1,6 +1,12 @@
 import React from 'react'
 
 export default function Message() {
+    const [result, setResult] = React.useState([])
+    React.useEffect(() => {
+        fetch(`http://localhost:3001/message`)
+        .then((res) => res.json())
+        .then((res) => setResult(res))
+    }, [])
   return (
       <section className="s6">
         <div className="s66">
@@ -21,259 +27,22 @@ export default function Message() {
                         <i className="fa-solid fa-bars"></i>
                     </div>
                     <div className="chatbox">
-                        <div className="card1">
+                        {result.map((item) => (
+                            <div className="card1" key={item.id}>
                             <div className="c1">
                                 <div className="c11">
-                                    <img src="./images/profileimage.jpeg" alt="Profile" />
+                                    <img src={item.img} alt="Profile" />
                                 </div>
                                 <div className="c12">
-                                    <p>User1</p>
-                                    <p className="small font-big">You : Hii</p>
+                                    <p>{item.name}</p>
+                                    <p className="small font-big">{item.text}</p>
                                 </div>
                             </div>
-                            <div className="c3">
-                                Mar 27
+                            <div className="c3 small">
+                                {item.time}
                             </div>
                         </div>
-                        <div className="card1">
-                            <div className="c1">
-                                <div className="c11">
-                                    <img src="./images/profileimage.jpeg" alt="Profile" />
-                                </div>
-                                <div className="c12">
-                                    <p>User1</p>
-                                    <p className="small font-big">You : Hii</p>
-                                </div>
-                            </div>
-                            <div className="c3">
-                                Mar 27
-                            </div>
-                        </div>
-                        <div className="card1">
-                            <div className="c1">
-                                <div className="c11">
-                                    <img src="./images/profileimage.jpeg" alt="Profile" />
-                                </div>
-                                <div className="c12">
-                                    <p>User1</p>
-                                    <p className="small font-big">You : Hii</p>
-                                </div>
-                            </div>
-                            <div className="c3">
-                                Mar 27
-                            </div>
-                        </div>
-                        <div className="card1">
-                            <div className="c1">
-                                <div className="c11">
-                                    <img src="./images/profileimage.jpeg" alt="Profile" />
-                                </div>
-                                <div className="c12">
-                                    <p>User1</p>
-                                    <p className="small font-big">You : Hii</p>
-                                </div>
-                            </div>
-                            <div className="c3">
-                                Mar 27
-                            </div>
-                        </div>
-                        <div className="card1">
-                            <div className="c1">
-                                <div className="c11">
-                                    <img src="./images/profileimage.jpeg" alt="Profile" />
-                                </div>
-                                <div className="c12">
-                                    <p>User1</p>
-                                    <p className="small font-big">You : Hii</p>
-                                </div>
-                            </div>
-                            <div className="c3">
-                                Mar 27
-                            </div>
-                        </div>
-                        <div className="card1">
-                            <div className="c1">
-                                <div className="c11">
-                                    <img src="./images/profileimage.jpeg" alt="Profile" />
-                                </div>
-                                <div className="c12">
-                                    <p>User1</p>
-                                    <p className="small font-big">You : Hii</p>
-                                </div>
-                            </div>
-                            <div className="c3">
-                                Mar 27
-                            </div>
-                        </div>
-                        <div className="card1">
-                            <div className="c1">
-                                <div className="c11">
-                                    <img src="./images/profileimage.jpeg" alt="Profile" />
-                                </div>
-                                <div className="c12">
-                                    <p>User1</p>
-                                    <p className="small font-big">You : Hii</p>
-                                </div>
-                            </div>
-                            <div className="c3">
-                                Mar 27
-                            </div>
-                        </div>
-                        <div className="card1">
-                            <div className="c1">
-                                <div className="c11">
-                                    <img src="./images/profileimage.jpeg" alt="Profile" />
-                                </div>
-                                <div className="c12">
-                                    <p>User1</p>
-                                    <p className="small font-big">You : Hii</p>
-                                </div>
-                            </div>
-                            <div className="c3">
-                                Mar 27
-                            </div>
-                        </div>
-                        <div className="card1">
-                            <div className="c1">
-                                <div className="c11">
-                                    <img src="./images/profileimage.jpeg" alt="Profile" />
-                                </div>
-                                <div className="c12">
-                                    <p>User1</p>
-                                    <p className="small font-big">You : Hii</p>
-                                </div>
-                            </div>
-                            <div className="c3">
-                                Mar 27
-                            </div>
-                        </div>
-                        <div className="card1">
-                            <div className="c1">
-                                <div className="c11">
-                                    <img src="./images/profileimage.jpeg" alt="Profile" />
-                                </div>
-                                <div className="c12">
-                                    <p>User1</p>
-                                    <p className="small font-big">You : Hii</p>
-                                </div>
-                            </div>
-                            <div className="c3">
-                                Mar 27
-                            </div>
-                        </div>
-                        <div className="card1">
-                            <div className="c1">
-                                <div className="c11">
-                                    <img src="./images/profileimage.jpeg" alt="Profile" />
-                                </div>
-                                <div className="c12">
-                                    <p>User1</p>
-                                    <p className="small font-big">You : Hii</p>
-                                </div>
-                            </div>
-                            <div className="c3">
-                                Mar 27
-                            </div>
-                        </div>
-                        <div className="card1">
-                            <div className="c1">
-                                <div className="c11">
-                                    <img src="./images/profileimage.jpeg" alt="Profile" />
-                                </div>
-                                <div className="c12">
-                                    <p>User1</p>
-                                    <p className="small font-big">You : Hii</p>
-                                </div>
-                            </div>
-                            <div className="c3">
-                                Mar 27
-                            </div>
-                        </div>
-                        <div className="card1">
-                            <div className="c1">
-                                <div className="c11">
-                                    <img src="./images/profileimage.jpeg" alt="Profile" />
-                                </div>
-                                <div className="c12">
-                                    <p>User1</p>
-                                    <p className="small font-big">You : Hii</p>
-                                </div>
-                            </div>
-                            <div className="c3">
-                                Mar 27
-                            </div>
-                        </div>
-                        <div className="card1">
-                            <div className="c1">
-                                <div className="c11">
-                                    <img src="./images/profileimage.jpeg" alt="Profile" />
-                                </div>
-                                <div className="c12">
-                                    <p>User1</p>
-                                    <p className="small font-big">You : Hii</p>
-                                </div>
-                            </div>
-                            <div className="c3">
-                                Mar 27
-                            </div>
-                        </div>
-                        <div className="card1">
-                            <div className="c1">
-                                <div className="c11">
-                                    <img src="./images/profileimage.jpeg" alt="Profile" />
-                                </div>
-                                <div className="c12">
-                                    <p>User1</p>
-                                    <p className="small font-big">You : Hii</p>
-                                </div>
-                            </div>
-                            <div className="c3">
-                                Mar 27
-                            </div>
-                        </div>
-                        <div className="card1">
-                            <div className="c1">
-                                <div className="c11">
-                                    <img src="./images/profileimage.jpeg" alt="Profile" />
-                                </div>
-                                <div className="c12">
-                                    <p>User1</p>
-                                    <p className="small font-big">You : Hii</p>
-                                </div>
-                            </div>
-                            <div className="c3">
-                                Mar 27
-                            </div>
-                        </div>
-                        <div className="card1">
-                            <div className="c1">
-                                <div className="c11">
-                                    <img src="./images/profileimage.jpeg" alt="Profile" />
-                                </div>
-                                <div className="c12">
-                                    <p>User1</p>
-                                    <p className="small font-big">You : Hii</p>
-                                </div>
-                            </div>
-                            <div className="c3">
-                                Mar 27
-                            </div>
-                        </div>
-                        <div className="card1">
-                            <div className="c1">
-                                <div className="c11">
-                                    <img src="./images/profileimage.jpeg" alt="Profile" />
-                                </div>
-                                <div className="c12">
-                                    <p>User1</p>
-                                    <p className="small font-big">You : Hii</p>
-                                </div>
-                            </div>
-                            <div className="c3">
-                                Mar 27
-                            </div>
-                        </div>
-                        
+                        ))}
                     </div>
                 </div>
                 <div className="l2">

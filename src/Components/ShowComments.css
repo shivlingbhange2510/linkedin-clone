@@ -6,6 +6,10 @@
      display: flex;
      flex-direction: column;
 }
+.imgname{
+    display: flex;
+    flex-direction: row;
+}
 .comment-main > p{
     color:black;
 }

@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
 import {CreatePostBtn} from './CreatePostBtn';
 import {Posts} from './Posts'
+// import { useNavigate } from "react-router-dom";
+import Profile from './Profile';
+import {Link} from "react-router-dom"
 export default function Body() {
     const [num, setNum] = useState(true);
     const [startpost, setstartpost] = useState(false)
     function startPost() {
         setstartpost(true)
     }
+    // let navigate = useNavigate();
     
     function opennav() {
         var show = document.querySelector(".showmoretext")
@@ -18,6 +22,7 @@ export default function Body() {
             show.innerHTML = `<p>Show less <i className="fa-solid fa-chevron-up"></i></p>`
         }
     }
+
     return (
         <>
             {startpost && <CreatePostBtn startpost={setstartpost} />}
@@ -27,11 +32,11 @@ export default function Body() {
                         <div className="b1">
                             <div className="box1">
                                 <div className="box11">
-                                    <img src="/images/profilebg.webp" alt="User Background" />
+                                    <img src="/images/profilebg.webp" alt="UserBackground" />
                                 </div>
                                 <div className="box12">
-                                    <img src="/images/profileimage.jpeg" alt="User Image" />
-                                    <p><b>User Name</b></p>
+                                    <img src="/images/profileimage.jpeg" alt="UserImage" />
+                                    <Link to="/profile"><b>User Name</b></Link>
                                     <p className="small">Aspiring Full Stack Web Development at Masai School</p>
                                 </div>
                             </div>
@@ -92,46 +97,6 @@ export default function Body() {
                             <div className="d4">
                             <Posts/>
                              <br/>
-                                <div className="post">
-                                    <div className="p1">
-                                        <div className="postdata">
-                                            <div className="left">
-                                                <div className="l1">
-                                                    <img src="/images/profileimage.jpeg" alt="User Profile" />
-                                                </div>
-                                                <div className="l2">
-                                                    <p>Masai School ⭐</p>
-                                                    <p className='small'>Coding School</p>
-                                                    <p className='small'>12h ago</p>
-                                                </div>
-                                            </div>
-                                            <p className="righttext">
-                                                <i className="fa-solid fa-ellipsis"></i>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="p2">
-                                        <img src="" alt="Post Image" />
-                                    </div>
-                                    <div className="p3">
-                                        <div className="reactions">
-                                            <p className='small link'>
-                                                <i className="fa-solid fa-heart i1"></i>
-                                                <i className="fa-solid fa-lightbulb i2"></i>
-                                                <i className="fa-solid fa-hands-clapping i3"></i>
-                                                <span> 12,223 Likes</span>
-                                            </p>
-                                            <p className='small'>12 Comments . 15 Shares</p>
-                                        </div>
-                                        <hr />
-                                        <div className="btns">
-                                            <button className='likebtn'><i className="fa-solid fa-thumbs-up"></i> Like</button>
-                                            <button className='commentbtn'><i className="fa-solid fa-comment-dots"></i> Comment</button>
-                                            <button className='sharebtn'><i className="fa-solid fa-share"></i> Share</button>
-                                            <button className='sendbtn'><i className="fa-solid fa-paper-plane"></i> Send</button>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <div className="down">

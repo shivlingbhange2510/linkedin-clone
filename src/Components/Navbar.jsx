@@ -2,14 +2,6 @@ import React from 'react'
 import { Link } from "react-router-dom"
 import { Todo } from './Todo/Todo'
 export default function Navbar() {
-    React.useEffect(() => {
-        // var show = document.querySelector(".showProfile")
-        // show.style.display = "none !important"
-    },[])
-    function showprofilefun() {
-        // var show = document.querySelector(".showProfile")
-        // show.style.display = "block !important"
-    }
     return (
         <div>
             <section className="s1" id="home">
@@ -59,9 +51,12 @@ export default function Navbar() {
                                         </Link>
                                         <p>Notifications</p>
                                 </div>
-                                <div className="me" onClick={showprofilefun}>
-                                    <img src="/images/profileimage.jpeg" alt="Account Holder" />
-                                    <p>Me <i className="fa-solid fa-caret-down"></i></p>
+                                <div className="me">
+                                    <Link to="/profile">
+                                        <img src="/images/profileimage.jpeg" alt="Account Holder" />
+                                        <p>Me <i className="fa-solid fa-caret-down"></i></p>
+
+                                    </Link>
                                 </div>
                             </div>
                             <div className="logos1">
@@ -78,9 +73,6 @@ export default function Navbar() {
                     </div>
                 </nav>
             </section>
-            {/* <div className="showProfile">
-                <Profile />
-            </div> */}
         </div>
     )
 }
