@@ -78,7 +78,7 @@ console.log('xx', xx)
         <section className="s7">
             <div className="s77">
                 <div className="d1">
-                    <button onClick={postDelete}>delete p</button>
+                    {/* <button onClick={postDelete}>delete p</button> */}
                     <p>Create a Post</p>
                     <i onClick={exit} className="fa-solid fa-xmark"></i>
                 </div>
