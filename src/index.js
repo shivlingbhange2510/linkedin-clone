@@ -11,6 +11,8 @@ import { Provider } from 'react-redux';
 
 
 // import { BrowserRouter } from "react-router-dom";
+// https://first-linkdin-clone.netlify.app/
+// http://localhost:3000/
 
 ReactDOM.render(
   <React.StrictMode>

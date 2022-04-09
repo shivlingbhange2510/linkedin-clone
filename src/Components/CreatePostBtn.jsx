@@ -41,7 +41,7 @@ console.log('xx', xx)
             {
               id: uuid(),
               userProfilePic: "",
-              userName: "shahjad ",
+              userName: user.nickname,
               userPosition: "flutter developer at amazon",
               commentTime: "2022-05-06",
               commentDecription: "own created for testing"

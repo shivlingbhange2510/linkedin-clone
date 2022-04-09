@@ -133,6 +133,19 @@ export const Posts = () => {
     const updatedData = postIs.filter((item) => item.id !== id)
     dispatch(deletPost(updatedData))
   }
+  const commentinput = {
+    padding : "3px",
+    fontSize : "15px",
+    marginBottom : "5px",
+    outline : "none",
+  }
+  const commentbtn = {
+    padding : "3px 10px",
+    fontSize : "15px",
+    cursor : "pointer",
+    marginLeft : "4px",
+    marginBottom : "5px"
+  }
 
   return (
     <div>
@@ -217,12 +230,13 @@ export const Posts = () => {
               {item?.showCommentInput && (<div className="input-comment-main">
                 <input
                   type="text"
+                  style={commentinput}
                   value={sendComment}
                   onChange={handleComment}
                   clasName="inputComment"
                 />
                 {sendComment !== "" && (
-                  <button onClick={() => sendcommentOnPost(item.id)}>post comment </button>
+                  <button style={commentbtn} onClick={() => sendcommentOnPost(item.id)}>post comment </button>
                 )}
               </div>)
               }
