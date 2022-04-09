@@ -14,7 +14,7 @@ export const NotiFicationMess = ({msg, btn}) => {
     }
     return (
       <div>
-        <button style={a1} onClick={notify}>{btn===undefined ? "Notify!": msg}</button>
+        <button style={a1} onClick={notify}>{btn===undefined ? "Notify!": btn}</button>
         <ToastContainer />
       </div>
     );

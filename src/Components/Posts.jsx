@@ -11,6 +11,7 @@ import {
   getAllPost2, deleteCommet, deletPost, show1posttypeAllComment,
   showCommentInputBox, upadtePostLike, addComentToPost
 } from "../Redux/AllPost/allPostAction";
+import { useAuth0 } from '@auth0/auth0-react';
 export const Posts = () => {
   const [allPost, setAllPost] = useState([]);
   console.log(allPost)
@@ -19,7 +20,7 @@ export const Posts = () => {
   let postIs = useSelector((store) => store.allPost.allPost);
   //   console.log("postIs postIs.allPost *****  ", postIs);
   const dispatch = useDispatch();
- 
+  const {user, } = useAuth0()
 
 
   useEffect(() => {
@@ -91,11 +92,11 @@ export const Posts = () => {
     const c = {
       userProfilePic: "",
       id: uuid(),
-      userName: "meera karale",
-      userPosition: "working at codewave",
+      userName: user.nickname,
+      userPosition: "working at google",
       userActivityTrack: '',
       commentTime: new Date(),
-      commentDecription: sendComment
+      commentDecription: sendComment,
     };
     const updatedComment = postIs.map((item) => {
       return (item.id !== id ? item : { ...item, commentMessage: [c, ...item?.commentMessage], commentStatus: true })
@@ -164,7 +165,7 @@ export const Posts = () => {
                   <div className="l2">
                     <p>{item.userCreatedPostName} ⭐</p>
                     <button style={{ border: "1px solid #fff", background: "#1b2226" }} onClick={() => { handleDeletePost(item.id) }}>
-                      <NotiFicationMess msg={"Delete Post"} btn={"deletd post"} />
+                      <NotiFicationMess msg={" Post Delete Succesfully !"} btn={"deletd post"} />
                     </button>
                     <p className="small">{item.nameOfOrganization}</p>
                     <p className="small">
@@ -246,17 +247,31 @@ export const Posts = () => {
                     <>
                       <hr />
                       <br />
-                      <button onClick={() => {
-                        handleDeletComm(
-                          item.id || item.commentDecription, val.commentDecription)
-                      }}>
-                        <NotiFicationMess msg={"Delete this Comment"} btn={"deletd comment"} />
-                      </button>
+                      {
+                        user.nickname===val.userName ?  <button onClick={() => {
+                          handleDeletComm(
+                            item.id || item.commentDecription, val.commentDecription)
+                        }}>
+                          <NotiFicationMess msg={"Delete this Comment"} btn={"deletd comment"} />
+                        </button>
+                        : null
+                      }
+                     
                       <div
                         className="comment-main"
                         style={{ width: "100%", border: "1px solid white !important", display: "flex", flexDirection: "row", marginTop : "10px" }}
                       >
                         <div style={{ margin: "6px 0 0 0" }}>
+                          {user.nickname===val.userName ? 
+                            <img
+                            width="40px"
+                            height="40px"
+                            style={{ borderRadius: "50%" }}
+                            src={user.picture}
+                            alt="userProfile"
+                          />
+                          :
+                         
                           <img
                             width="40px"
                             height="40px"
@@ -264,6 +279,7 @@ export const Posts = () => {
                             src="/images/profileimage.jpeg"
                             alt="userProfile"
                           />
+                          }
                         </div>
                         <div style={{marginLeft : "10px", display : "flex" , flexDirection : "column", background:"#3c4345", padding : "10px", borderRadius : "0 6px 6px 6px", width : "100%"}}>
                           <p className="userName"> {val.userName} </p>

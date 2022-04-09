@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import {addsinglePost} from  "../Redux/AllPost/allPostAction";
 import {ImgTOBase64} from './Images/ImgTOBase64';
 import { useAuth0 } from '@auth0/auth0-react';
+import { NotiFicationMess } from './NotiFicationMess'
 
 export  function CreatePostBtn({startpost}) {
     const[imgData, setImgData]=useState('');
@@ -18,18 +19,18 @@ const[postDescription, setPosDescription]=useState('');
     function exit() {
         startpost(false)
     }
-let xx=  "ac877d11-505c-4b4a-91e1-34092181ed51";
-xx= "c37d4d5e-3bcf-4783-b201-d6ffba31d32f";
+let xx=  "868236b9-4a0b-44dd-818f-d063887be0cb";
+xx=   "391e4ca0-3ba5-4d8c-b237-0ce1710a8590";
 console.log('xx', xx)
-    // const postDelete=()=>{
-    //     axios.delete(`${baseUrl}/allpost/${xx}`)
-    //     .then((res)=>{
-    //         console.log('delete api res is ', res);
-    //     }).catch((er)=>{
-    //         console.log('delete api error is  ', er);
+    const postDelete=()=>{
+        axios.delete(`${baseUrl}/allpost/${xx}`)
+        .then((res)=>{
+            console.log('delete api res is ', res);
+        }).catch((er)=>{
+            console.log('delete api error is  ', er);
 
-    //     })
-    // }
+        })
+    }
     const sendPost = () => {
         const postData = {
           id: uuid(),
@@ -37,18 +38,18 @@ console.log('xx', xx)
           postImage:imgData,
           commentStatus: false,
           showCommentInput: false,
-          commentMessage: [
-            {
-              id: uuid(),
-              userProfilePic: "",
-              userName: user.nickname,
-              userPosition: "flutter developer at amazon",
-              commentTime: "2022-05-06",
-              commentDecription: "own created for testing"
-            }
-            ],
-          userCreatedPostName: "first post of last post of the year",
           totalLike: 0,
+          commentMessage: [
+            // {
+            //   id: uuid(),
+            //   userProfilePic: "",
+            //   userName: user.nickname,
+            //   userPosition: "flutter developer at amazon",
+            //   commentTime: "2022-05-06",
+            //   commentDecription: "own created for testing"
+            // }
+            ],
+          userCreatedPostName:  user.nickname,
         //   postDescription: "hiring for image developer",
           nameOfOrganization: "masai school",
           postCreatedTime: new Date(),
@@ -77,7 +78,7 @@ console.log('xx', xx)
         <section className="s7">
             <div className="s77">
                 <div className="d1">
-                    {/* <button onClick={postDelete}>delete p</button> */}
+                    <button onClick={postDelete}>delete p</button>
                     <p>Create a Post</p>
                     <i onClick={exit} className="fa-solid fa-xmark"></i>
                 </div>
@@ -120,7 +121,10 @@ console.log('xx', xx)
                         </p>
                     </div>
                     <div className="d32">
-                        <button onClick={sendPost} >Post</button>
+                        <button onClick={sendPost} >
+                        <NotiFicationMess msg={"Post Created Succesfully !"} btn={"post"} />
+                        {/* <NotiFicationMess msg={" Post Created Succesfully ! "} btn={"Post"} /> */}
+                        </button>
                     </div>
                 </div>
             </div>
