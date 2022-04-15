@@ -7,8 +7,8 @@ LinkedIn is online platform for a job seeker who are searching for job and it is
 
 # Project Snapshot:
 
-<!-- ![linkedin-clone](https://prnt.sc/6Ag7BaQ71Trp) -->
-<img src='https://imgur.com/a/KgBHpy7.png' alt='linkedIn clone' />
+![linkedin-clone](https://thelinkedinman.com/wp-content/uploads/2021/10/Dark-mode-2.jpg)
+<!-- <img src='https://thelinkedinman.com/wp-content/uploads/2021/10/Dark-mode-2.jpg' alt='linkedIn clone' /> -->
 
 
 # Tech Stack
