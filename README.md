@@ -1,6 +1,6 @@
 # SUGAR Cosmetics Clone Project
 
-Original website: https://in.sugarcosmetics.com/ <br/><br/>
+Original website: https://www.linkedin.com/ <br/><br/>
 About: SUGAR Cosmetics is a cruelty-free makeup brand that serves beauty products online.
 LinkedIn is online platform for a job seeker who are searching for job and it is the world most famous platform  for hiring employee and it is more profession
 <br/> <br/>
