@@ -7,7 +7,7 @@ LinkedIn is online platform for a job seeker who are searching for job and it is
 
 # Project Snapshot:
 
-![sugarcosmetic](https://prnt.sc/6Ag7BaQ71Trp)
+![linkedin-clone](https://prnt.sc/6Ag7BaQ71Trp)
 
 
 # Tech Stack
