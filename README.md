@@ -1,19 +1,22 @@
-# LinkdIn Clone Project
+# SUGAR Cosmetics Clone Project
 
 Original website: https://in.sugarcosmetics.com/ <br/><br/>
 About: SUGAR Cosmetics is a cruelty-free makeup brand that serves beauty products online.
+LinkedIn is online platform for a job seeker who are searching for job and it is the world most famous platform  for hiring employee and it is more profession
 <br/> <br/>
 
 # Project Snapshot:
 
-![sugarcosmetic](https://user-images.githubusercontent.com/54496820/163173374-59326d61-dade-43fe-b147-16fc36f96d52.PNG)
+![sugarcosmetic](https://prnt.sc/6Ag7BaQ71Trp)
 
 
 # Tech Stack
 
-<h3>HTML5<h3/>
-<h3>CSS3<h3/>
-<h3>JavaScript<h3/>
+<h3>Reactjs<h3/>
+<h3>Redux<h3/>
+<h3>Bootstrap<h3/>
+<h3>Auth0<h3/>
+<h3>Json Server<h3/>
 <br/>
 
 # Tools
@@ -22,6 +25,8 @@ About: SUGAR Cosmetics is a cruelty-free makeup brand that serves beauty product
 <h3>Netlify<h3/>
 <h3>Git/GitHub<h3/>
 <h3>Local Storage<h3/>
+
+
 <br/>
 
 # Communication Tools
